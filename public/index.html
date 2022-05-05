@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big N Recycle</title>
+    <meta property="og:image" src="bigN_namecard_logo.png">
+    <link rel="icon" type="image/png" href="bigN_namecard_logo.png" >
+    
+
+    <style>
+      body {margin:0;}
+      
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      
+       .navbar img {
+         size: 10px;
+         position: fixed;
+         top: 4;
+         float: left;
+         margin-top: 7px;
+         margin-left: 5px;
+
+
+       }
+
+      
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .navbar a:hover {
+        background: #ddd;
+        color: black;
+        
+      }
+      
+      .main {
+        padding: 16px;
+        margin-left: 5px;
+        margin-top: 30px;
+        height: 1500px; /* Used in this example to enable scrolling */
+      }
+      </style>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #039be5; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 2 0 16px;}
+      #message p { line-height: 100%; margin: 30px 0 24px; font-size: 14px; }
+      #message a { display: block;  margin: 8px 0 0px; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 52px solid #039be5; }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="bigN_namecard_logo.png" alt="bigN_logo" width="auto" height="33">
+      
+      <a href="#home"> \                       \   Big N Recycle</a>
+      <a href="#news"></a>
+      <a href="#contact"></a>
+      
+    </div>
+    
+
+    <div id="message">
+      <h2 id="date"></h2>
+      <h1>Big N Recycle Report System</h1>
+      <p>เลือกรูปแบบรายการแสดงผล</p>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3ky4IsjtmwRjNM2bwVGGgm1NihJ9urNKw2HqHQ8q_drd_mzOLZcfioIEv-8u9T7GilD74pwWOLUe6/pubhtml?gid=1361712414&single=true">รายงาน รายวัน</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3ky4IsjtmwRjNM2bwVGGgm1NihJ9urNKw2HqHQ8q_drd_mzOLZcfioIEv-8u9T7GilD74pwWOLUe6/pubhtml?gid=985041927&single=true">รายงาน รายเดือน</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3ky4IsjtmwRjNM2bwVGGgm1NihJ9urNKw2HqHQ8q_drd_mzOLZcfioIEv-8u9T7GilD74pwWOLUe6/pubhtml?gid=756048393&single=true">รายงาน รายบิล</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3ky4IsjtmwRjNM2bwVGGgm1NihJ9urNKw2HqHQ8q_drd_mzOLZcfioIEv-8u9T7GilD74pwWOLUe6/pubhtml?gid=1960826207&single=true">เรียกดู บิล</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3ky4IsjtmwRjNM2bwVGGgm1NihJ9urNKw2HqHQ8q_drd_mzOLZcfioIEv-8u9T7GilD74pwWOLUe6/pubhtml?gid=1894237223&single=true">รายงาน คลังสินค้า</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3ky4IsjtmwRjNM2bwVGGgm1NihJ9urNKw2HqHQ8q_drd_mzOLZcfioIEv-8u9T7GilD74pwWOLUe6/pubhtml?gid=978984504&single=true">รายงาน รูปแบบกราฟ</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRLRRTwMbPyxWEC9vAkODXZXMHmvFKjKTXcsynIvjtCZZCbmuK4PmvJbMpSibsWlu2yhcWHFqu0xvEH/pubhtml?gid=203782516&single=true">รายงาน เปรียบเทียบราคา</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSlJVGG3vEyuu11fhdUj8S_xU1pcQYhluE3fscfEuQhm9SYZf25F6nCQ5A853vuv_zw4j2KPYDQrEp3/pubhtml?gid=1962309855&single=true">รายงาน ค่าแรงพนักงาน</a>
+    </div>
+    <p id="load">Develop by Papon W.</p>
+
+    <script src="index.js"></script>
+  </body>
+</html>
