@@ -37,4 +37,4 @@ function main(datasetId = 'my_dataset') {
   getDataset();
   // [END bigquery_get_dataset]
 }
-main(...process.argv.slice(2));
+main(main.process.argv.slice(2));
