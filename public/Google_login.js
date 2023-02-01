@@ -29,12 +29,20 @@ if (params && params['access_token']) {
         console.log(xhr.response);
     } else if (xhr.readyState === 4 && xhr.status === 401) {
         // Token invalid, so prompt for user permission.
-        oauth2SignIn();
+        oauth2SignIn().then(function() {
+            console.log('User signed in.');
+            document.getElementById('signInOutButton').innerHTML = 'Sign Out';
+            document.getElementById('signInOutButton').onclick = signOut;
+          });
     }
     };
     xhr.send(null);
 } else {
-    oauth2SignIn();
+    oauth2SignIn().then(function() {
+        console.log('User signed in.');
+        document.getElementById('signInOutButton').innerHTML = 'Sign Out';
+        document.getElementById('signInOutButton').onclick = signOut;
+      });
 }
 }
 
@@ -70,14 +78,13 @@ for (var p in params) {
 // Add form to page and submit it to open the OAuth 2.0 endpoint.
 document.body.appendChild(form);
 form.submit();
+
 }
 
 
 
 
 //on sign in
-
-
 function onSignIn(googleUser) {
     const profile = googleUser.getBasicProfile();
     const userId = profile.getId();
@@ -104,5 +111,19 @@ function onSignIn(googleUser) {
 
     document.body.appendChild(userImageElement);
 
+
+    
+  
 }
 
+    //singout
+    function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        console.log('User signed out.');
+        document.getElementById('signInOutButton').innerHTML = 'Sign In';
+        document.getElementById('signInOutButton').onclick = signIn;
+    });
+    }
+
+    
