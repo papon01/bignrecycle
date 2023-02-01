@@ -1,5 +1,5 @@
 var YOUR_CLIENT_ID = '837943993291-ockna05iiitrqkjjldcun1h623pheo2n.apps.googleusercontent.com';
-var YOUR_REDIRECT_URI = 'https://bignrecycle.web.app';
+var YOUR_REDIRECT_URI = 'https://bignrecycle--preview-name-o2tq8s4w.web.app';
 var fragmentString = location.hash.substring(1);
 
 // Parse query string to see if page request is coming from OAuth 2.0 server.
