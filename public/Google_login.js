@@ -10,14 +10,14 @@ params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
 }
 if (Object.keys(params).length > 0) {
 localStorage.setItem('oauth2-test-params', JSON.stringify(params) );
-if (params['state'] && params['state'] == 'try_sample_request') {
-    trySampleRequest();
+if (params['state'] && params['state'] == 'basic_login') {
+    basicLogin();
 }
 }
 
 // If there's an access token, try an API request.
 // Otherwise, start OAuth 2.0 flow.
-function trySampleRequest() {
+function basicLogin() {
 var params = JSON.parse(localStorage.getItem('oauth2-test-params'));
 if (params && params['access_token']) {
     var xhr = new XMLHttpRequest();
@@ -54,7 +54,7 @@ form.setAttribute('action', oauth2Endpoint);
 var params = {'client_id': YOUR_CLIENT_ID,
                 'redirect_uri': YOUR_REDIRECT_URI,
                 'scope': 'https://www.googleapis.com/auth/drive.metadata.readonly',
-                'state': 'try_sample_request',
+                'state': 'basic_login',
                 'include_granted_scopes': 'true',
                 'response_type': 'token'};
 
@@ -77,10 +77,32 @@ form.submit();
 
 //on sign in
 
+
 function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  }
+    const profile = googleUser.getBasicProfile();
+    const userId = profile.getId();
+    const userName = profile.getName();
+    const userImage = profile.getImageUrl();
+    const userEmail = profile.getEmail();
+
+    // Do not send userId to your backend! Use an ID token instead.
+    console.log(`ID: ${userId}`);
+    console.log(`Name: ${userName}`);
+    console.log(`Image URL: ${userImage}`);
+    console.log(`Email: ${userEmail}`);
+
+
+    //porfilepic "window.userImage"
+    window.userImage = userImage;
+
+    const userImageElement = document.createElement('img');
+    userImageElement.src = window.userImage;
+    userImageElement.alt = 'User Profile Image';
+    userImageElement.style.width = 'auto';
+    userImageElement.style.height = 'auto';
+    userImageElement.style.borderRadius = '50%';
+
+    document.body.appendChild(userImageElement);
+
+}
+
