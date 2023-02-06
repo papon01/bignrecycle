@@ -29,6 +29,10 @@
 
     
 
+    
+
+    
+
   </head>    
 
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -56,7 +60,7 @@
             
             <li class="dropdown-toggle">
              
-              <a href="#" data-toggle="dropdown" style="padding:5px ;padding-left:15px ;">
+              <a href="#" data-toggle="dropdown" style="padding:5px ;padding-left:15px ;" id="signIn">
                 <img src="Screenshot 2023-02-05 122656.png" alt="Profile_Pic" id="profilepic">
                 <span class="caret"></span>
               </a>
@@ -66,7 +70,7 @@
                 <li><a href="#">Name Surname</a></li>
                 <li><a href="#">Email Account</a></li>
                 <li><a href="#">User Authority</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login / Logout</a></li>
+                <li><a id="signOut" onclick="SignInOut()"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
               </ul>
             </li>
             
@@ -98,9 +102,10 @@
               <div id="google_translate_element"></div>
           </div>
           <div class="text-center">
-              <h5>version 11.8</h5>
+              <h5>test loginout hope it work 2</h5>
           </div>
       </footer>
+      <script src="index.js"></script>
   </body>
   
     
