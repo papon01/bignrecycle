@@ -3,28 +3,9 @@
       .myNavbar {
         margin-top: 20px;  
     }
-    .navbar li a, .navbar .navbar-brand {
-      
-      letter-spacing: 0.09em;
-      
 
-    }
-    .navbar-nav li a:hover, .navbar-nav li.active a {
       
-      
-      cursor: pointer;
-      
-      
-      
-    }
-
     
-    .navbar-default .navbar-toggle {
-      
-        
-      border-color: transparent;
-     
-    }
 
       /*logo*/
           #logo {
@@ -76,11 +57,11 @@
 
         /*porfilepic*/
           
-        .profilepic {
+        #profilepic {
           vertical-align: middle;
           width: 42px;
           height: 42px;
           border-radius: 50%;
-          float: right;
+          
           
         }
