@@ -27,40 +27,52 @@
     <!-- CSS Link-->
     <link rel="stylesheet" href="style.css">
 
+    
+
   </head>    
 
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-    <nav class="navbar navbar-inverse col-sm-12">
-      <div class="container-fluid col-sm-12">
-          <div class="navbar-header col-sm-12">
-            <a class="navbar-brand col-md-3" href="#myPage" style="float:left;width: 200px; ">
-              <img id="logo" src="bigN_namecard_logo.png" alt="logo">
-              <strong style="letter-spacing: 0.05em;">BigNRecycle</strong>
-            </a>
-    
-            <button type="button" class="navbar-toggle nevbar-left" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                       
-            </button>    
-            
-            <div class="collapse navbar-collapse col-sm-7" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">CONTACT</a></li>
-              </ul>
-            </div>
-            
-            <div class="navbar-header col-sm-1" style="float: right; ">
-              <a href="#" class="navbar-brand col-sm-1" style="font-size: 14px ">
-                LOGIN
-              </a>
-            </div>
-          </div>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#"><img id="logo" src="bigN_namecard_logo.png" alt="logo">
+            <strong style="letter-spacing: 0.05em;">BigNRecycle</strong></a>
         </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>            
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown-toggle">
+             
+               <a href="#" data-toggle="dropdown" style="padding:5px">
+                <img src="Screenshot 2023-02-05 122656.png" alt="Profile_Pic" id="profilepic">
+                <span class="caret"></span>
+              </a>
+                
+             
+              <ul class="dropdown-menu">
+                <li><a href="#">Name Surname</a></li>
+                <li><a href="#">Email Account</a></li>
+                <li><a href="#">User Authority</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login / Logout</a></li>
+              </ul>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
     </nav>
       
     <div class="container">
