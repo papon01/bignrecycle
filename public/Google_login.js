@@ -103,7 +103,8 @@ function SignInOut() {
       if (xhr.readyState === 4 && xhr.status === 200) {
         console.log(xhr.response);
         console.log("SignInOut_if_success");
-        console.log("oath2SingIn_init");
+        whenLogIn();
+        console.log("whenLogIn()_Init");
 
 
       } else if (xhr.readyState === 4 && xhr.status === 401) {
@@ -153,3 +154,5 @@ function oauth2SignIn() {
   document.body.appendChild(form);
   form.submit();
 }
+
+
