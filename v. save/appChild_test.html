@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appChild_test</title>
+    <body>
+
+        <ul id="myList">
+          <li>Water</li>
+        
+          
+        </ul>
+        
+        <p>Click the button to replace the first item in the the list and change the button text.</p>
+        
+        <a id="logInOut" onclick="myFunction1()">Logout</a>
+        
+        <script>
+        function myFunction1() {
+          const element = document.createElement("li");
+          const textNode = document.createTextNode("Coffee");
+          element.appendChild(textNode);
+        
+          const list = document.getElementById("myList");
+          list.appendChild(element, list.children[0]);
+        
+          document.getElementById("logInOut").innerHTML = "Login";
+          document.getElementById("logInOut").setAttribute("onclick", "myFunction2()");
+        }
+        
+        function myFunction2() {
+          const element = document.createElement("li");
+          const textNode = document.createTextNode("Water");
+          element.appendChild(textNode);
+        
+          const list = document.getElementById("myList");
+          list.appendChild(element, list.children[0]);
+        
+          document.getElementById("logInOut").innerHTML = "Logout";
+          document.getElementById("logInOut").setAttribute("onclick", "myFunction1()");
+        }
+        </script>
+        
+        </body>
+        
+        </html>

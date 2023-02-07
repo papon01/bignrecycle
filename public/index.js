@@ -107,14 +107,21 @@ function SignInOut() {
     xhr.onreadystatechange = function (e) {
       if (xhr.readyState === 4 && xhr.status === 200) {
         console.log(xhr.response);
+        console.log("SignInOut_if_success");
+        oauth2SignIn();
+        console.log("oath2SingIn_init");
+
+
       } else if (xhr.readyState === 4 && xhr.status === 401) {
         // Token invalid, so prompt for user permission.
         oauth2SignIn();
+        console.log("SignInOut_else_if_success");
       }
     };
     xhr.send(null);
   } else {
     oauth2SignIn();
+    console.log("SignInOut_else_success")
   }
 }
 
@@ -145,6 +152,7 @@ function oauth2SignIn() {
     input.setAttribute('name', p);
     input.setAttribute('value', params[p]);
     form.appendChild(input);
+    console.log("input_success_appchild")
   }
 
   // Add form to page and submit it to open the OAuth 2.0 endpoint.
@@ -178,7 +186,8 @@ function oauth2SignIn() {
       userImageElement.style.borderRadius = '50%';
       
       const pp = document.getElementById('profilepic');
-      
+
+      console.log(pp.replaceChild(userImageElement, pp.firstChild))
       pp.replaceChild(userImageElement, pp.firstChild);
 }
 
