@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appChild_test2</title>
+        <!--bootstrap.css-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+    
+    <body>
+
+        
+        <ul class="nav navbar-nav navbar-right">
+            
+            <li class="dropdown-toggle">
+             
+              <a href="#" data-toggle="dropdown" style="padding:5px ;padding-left:15px; " id="signIn">
+                <img src="Screenshot 2023-02-05 122656.png" alt="Profile_Pic" id="profilepic">
+                <span class="caret"></span>
+              </a>
+                
+             
+              <ul class="dropdown-menu">
+                <li><a href="#">Name Surname</a></li>
+                <li><a href="#">Email Account</a></li>
+                <li><a href="#">User Authority</a></li>
+                <li><a id="signOut" onclick="SignInOut()"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+              </ul>
+            </li>
+            
+            
+          </ul>
+
+
+
+
+
+
+
+
+
+
+
+        <ul id="myList">
+          
+        
+          
+        </ul>
+        
+        <p>Click the button to replace the first item in the the list and change the button text.</p>
+        
+        <a id="logInOut" onclick="myFunction1()">Login</a>
+        
+        <script>
+        function myFunction1() {
+          const element = document.createElement("li");
+          const textNode = document.createTextNode("Coffee");
+          element.appendChild(textNode);
+        
+          const list = document.getElementById("myList");
+          list.appendChild(element, list.children[0]);
+        
+          document.getElementById("logInOut").innerHTML = "Logout";
+          document.getElementById("logInOut").setAttribute("onclick", "myFunction2()");
+        }
+        
+        function myFunction2() {
+          
+        
+          const list = document.getElementById("myList");
+          list.removeChild(list.children[0]);
+          
+        
+          document.getElementById("logInOut").innerHTML = "Login";
+          document.getElementById("logInOut").setAttribute("onclick", "myFunction1()");
+        }
+        </script>
+        
+        </body>
+        
+        </html>

@@ -8,40 +8,89 @@
     <body>
 
         <ul id="myList">
-          <li>Water</li>
+          
         
           
         </ul>
         
         <p>Click the button to replace the first item in the the list and change the button text.</p>
         
-        <a id="logInOut" onclick="myFunction1()">Logout</a>
+        <a id="logInOut" onclick="myFunction1()">Login</a>
         
         <script>
-        function myFunction1() {
-          const element = document.createElement("li");
-          const textNode = document.createTextNode("Coffee");
-          element.appendChild(textNode);
+      //add profile      
+      function myFunction1() {
+        const element = document.createElement("ul");
+        element.classList.add("dropdown-menu");
         
-          const list = document.getElementById("myList");
-          list.appendChild(element, list.children[0]);
+        const listItem1 = document.createElement("li");
+        const link1 = document.createElement("a");
+        link1.setAttribute("href", "#");
+        link1.textContent = "Name Surname";
+        listItem1.appendChild(link1);
         
-          document.getElementById("logInOut").innerHTML = "Login";
-          document.getElementById("logInOut").setAttribute("onclick", "myFunction2()");
+        const listItem2 = document.createElement("li");
+        const link2 = document.createElement("a");
+        link2.setAttribute("href", "#");
+        link2.textContent = "Email Account";
+        listItem2.appendChild(link2);
+        
+        const listItem3 = document.createElement("li");
+        const link3 = document.createElement("a");
+        link3.setAttribute("href", "#");
+        link3.textContent = "User Authority";
+        listItem3.appendChild(link3);
+        
+        const listItem4 = document.createElement("li");
+        const link4 = document.createElement("a");
+        link4.setAttribute("href", "#");
+        link4.setAttribute("id", "signOut");
+        link4.setAttribute("onclick", "myFunction2()");
+        const logoutIcon = document.createElement("span");
+        logoutIcon.classList.add("glyphicon", "glyphicon-log-in");
+        logoutIcon.textContent = "Logout";
+        link4.appendChild(logoutIcon);
+        listItem4.appendChild(link4);
+        
+        element.appendChild(listItem1);
+        element.appendChild(listItem2);
+        element.appendChild(listItem3);
+        element.appendChild(listItem4);
+        
+        const list = document.getElementById("myList");
+        list.appendChild(element);
+
+
+                addpic();
         }
-        
+
+        function addpic() {
+            const img = document.createElement("img");
+            img.setAttribute("onclick", "myFunction2()");
+            img.setAttribute("src", "Screenshot 2023-02-05 122656.png");
+            img.setAttribute("width", "42px");
+            img.setAttribute("height", "42px");
+            img.setAttribute("borderRadius", "50%");
+            
+            const logInOut = document.getElementById("logInOut");
+                if (logInOut.hasChildNodes()) {
+                    logInOut.replaceChild(img, logInOut.firstChild);
+                } else {
+                    logInOut.appendChild(img);
+                }
+
+           
+        }
+
         function myFunction2() {
-          const element = document.createElement("li");
-          const textNode = document.createTextNode("Water");
-          element.appendChild(textNode);
-        
-          const list = document.getElementById("myList");
-          list.appendChild(element, list.children[0]);
-        
-          document.getElementById("logInOut").innerHTML = "Logout";
-          document.getElementById("logInOut").setAttribute("onclick", "myFunction1()");
+            const list = document.getElementById("myList");
+            list.removeChild(list.children[0]);
+            
+            const logInOut = document.getElementById("logInOut");
+            logInOut.innerHTML = "Login";
+            logInOut.setAttribute("onclick", "myFunction1()");
         }
-        </script>
+                </script>
         
         </body>
         
