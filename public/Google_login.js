@@ -112,10 +112,9 @@ function onSignIn(googleUser) {
     console.log(`Email: ${userEmail}`);
 
 
-    //porfilepic "window.userImage"
-    window.userImage = userImage;
+    
 
-    const userImageElement = document.createElement('img');
+    const userImageElement = document.createElement('profilepic');
     userImageElement.src = window.userImage;
     userImageElement.alt = 'User Profile Image';
     userImageElement.style.width = '42px';

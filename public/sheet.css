@@ -29,10 +29,6 @@
 
     
 
-    
-
-    
-
   </head>    
 
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -58,12 +54,19 @@
           
           <ul class="nav navbar-nav navbar-right">
             
-            <div class="collapse navbar-collapse col-sm-7" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">CONTACT</a></li>
+            <li class="dropdown-toggle">
+             
+              <a href="#" data-toggle="dropdown" style="padding:5px ;padding-left:15px ;">
+                <img src="Screenshot 2023-02-05 122656.png" alt="Profile_Pic" id="profilepic">
+                <span class="caret"></span>
+              </a>
+                
+             
+              <ul class="dropdown-menu">
+                <li><a href="#">Name Surname</a></li>
+                <li><a href="#">Email Account</a></li>
+                <li><a href="#">User Authority</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login / Logout</a></li>
               </ul>
             </li>
             
@@ -73,10 +76,12 @@
       </div>
     </nav>
       
-    <div class="container">
-      <h3>Collapsible Navbar</h3>
-      <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
-      <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+    <div class="container ">
+      <h3>Price Table</h3>
+      <p>Note: Our prices are subject to change without notice and are not guaranteed</p>
+      <div >
+        <iframe src="priceTable.html" frameborder="0" id="priceTable" ></iframe>
+      </div>
     </div>
     
   
@@ -85,10 +90,9 @@
               <div id="google_translate_element"></div>
           </div>
           <div class="text-center">
-              <h5>version 118</h5>
+              <h5>version 11.8</h5>
           </div>
       </footer>
-      <script src="index.js"></script>
   </body>
   
     
