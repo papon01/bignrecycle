@@ -50,7 +50,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar" >
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>            
+            <li><a href="#">Home</a></li>            
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
@@ -58,20 +58,13 @@
           
           <ul class="nav navbar-nav navbar-right">
             
-            <li class="dropdown-toggle">
+            <li class="dropdown-toggle" id="dropdown_lg">
              
-              <a href="#" data-toggle="dropdown" style="padding:5px ;padding-left:15px ;" id="signIn">
-                <img src="Screenshot 2023-02-05 122656.png" alt="Profile_Pic" id="profilepic">
-                <span class="caret"></span>
-              </a>
+              <a href="#" id="logInOut" onclick="SignInOut()">Login</a>
                 
              
-              <ul class="dropdown-menu">
-                <li><a href="#">Name Surname</a></li>
-                <li><a href="#">Email Account</a></li>
-                <li><a href="#">User Authority</a></li>
-                <li><a id="signOut" onclick="SignInOut()"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
-              </ul>
+              
+   
             </li>
             
             
@@ -102,10 +95,11 @@
               <div id="google_translate_element"></div>
           </div>
           <div class="text-center">
-              <h5>test loginout hope it work 0503</h5>
+              <h5>test loginout hope it work 11.8</h5>
           </div>
       </footer>
       <script src="index.js"></script>
+      <script src="app.js"></script>
   </body>
   
     
