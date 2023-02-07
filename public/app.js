@@ -1,4 +1,14 @@
 function whenLogIn() {
+  //user data
+  var profile = googleUser.getBasicProfile();
+  var userId = profile.getId();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  var userName = profile.getName();
+  console.log('Name: ' + profile.getName());
+  var userImage = profile.getImageUrl();
+  console.log('Image URL: ' + profile.getImageUrl());
+  var userEmail = profile.getEmail()
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
   // Remove the "Login" link
   const loginLink = document.querySelector("#logInOut");
@@ -61,18 +71,13 @@ function whenLogOut() {
   dropdownListItem.append(login);
 }
 
-//user data
-var googleUser;
-
-function onSignIn(user) {
-  googleUser = user;
-  var profile = googleUser.getBasicProfile();
-
-  var userId = profile.getId()
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-
-  var userName = profile.getName()
-  console.log('Name: ' + profile.getName());
-
-  var userImage = profile.getImageUrl()
+function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    whenLogOut();
+    console.log('User signed out.');
+  });
 }
+
+
+
